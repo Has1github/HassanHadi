@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
+use  App\Http\Livewire\Test;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('/test', function () {
+//     return view('test');
+// });
+
+
+Route::get('/test',Test::class)->name('test');
+
